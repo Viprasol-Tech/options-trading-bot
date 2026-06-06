@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "options-trading-bot"
-version = "0.1.0"
-description = "Options trading bot — Black-Scholes pricing, Greeks and strategy payoffs. By Viprasol Tech."
+version = "0.2.0"
+description = "Options trading bot — Black-Scholes pricing, Greeks, implied volatility and multi-leg strategies. By Viprasol Tech."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
