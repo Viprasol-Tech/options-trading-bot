@@ -68,7 +68,11 @@ options-trading-bot export butterfly --out payoff.json
 
 ```python
 from options_trading_bot import (
-    OptionType, price, greeks, implied_volatility, iron_condor,
+    OptionType,
+    price,
+    greeks,
+    implied_volatility,
+    iron_condor,
 )
 from options_trading_bot.export import export_payoff
 
@@ -83,8 +87,8 @@ print(f"implied vol = {iv:.4%}")
 
 # 3) Build and analyse an iron condor
 condor = iron_condor(90, 95, 105, 110, premiums=(1.0, 2.5, 2.5, 1.0))
-print(condor.net_premium())            # +3.0 -> net credit
-print(condor.break_evens(70, 130))     # [92.0, 108.0]
+print(condor.net_premium())  # +3.0 -> net credit
+print(condor.break_evens(70, 130))  # [92.0, 108.0]
 print(condor.max_profit(70, 130), condor.max_loss(70, 130))  # 3.0, -2.0
 print(condor.position_greeks(spot=100, t=0.08, r=0.05, vol=0.2).delta)
 
